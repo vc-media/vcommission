@@ -1,29 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Site Name</title>
-  <meta name="description" content="Short description about your site">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCommission | India's Leading Affiliate Network</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --v-blue: #0056b3;
+            --v-dark: #1a1a1a;
+            --v-accent: #ffcc00;
+            --v-gray: #f4f7f6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; }
+
+        /* Navigation */
+        header {
+            background: #fff;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+        }
+
+        .logo img { height: 50px; } /* Replace with vCommission Logo */
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--v-dark);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--v-blue); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 80px;
+        }
+
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 30px; }
+
+        .btn {
+            padding: 15px 35px;
+            background: var(--v-accent);
+            color: var(--v-dark);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+
+        /* Features Section */
+        .section { padding: 80px 10%; text-align: center; }
+        .section h2 { font-size: 2.5rem; margin-bottom: 50px; }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: var(--v-gray);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+        .feature-card:hover { background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .feature-card img { width: 60px; margin-bottom: 20px; }
+
+        /* Blog Section (Your Specific Content) */
+        .blog-section { background: #fff; padding: 60px 10%; }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .blog-item {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .blog-item img { width: 100%; height: 200px; object-fit: cover; }
+        .blog-content { padding: 20px; }
+        .blog-content h3 { margin-bottom: 10px; font-size: 1.2rem; }
+
+        /* Footer */
+        footer {
+            background: var(--v-dark);
+            color: white;
+            padding: 60px 10% 20px;
+            text-align: center;
+        }
+        .footer-links { margin-bottom: 30px; }
+        .footer-links a { color: #aaa; text-decoration: none; margin: 0 15px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; } /* Mobile menu would go here */
+        }
+    </style>
 </head>
 <body>
 
-<h1>Your Site Name</h1>
+    <header>
+        <div class="logo">
+            <h2 style="color: #0056b3;">vCommission</h2>
+        </div>
+        <nav>
+            <a href="#">Advertisers</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Events</a>
+            <a href="#">Blog</a>
+            <a href="#" class="btn" style="padding: 10px 20px;">Login</a>
+        </nav>
+    </header>
 
-<p>
-Welcome to my website. This site shares blogs and information related to my niche.
-</p>
+    <section class="hero">
+        <h1>India's #1 Affiliate Network</h1>
+        <p>Connecting 100K+ Publishers with Global Brands. Delivering Performance Since 2008.</p>
+        <div style="display: flex; gap: 20px;">
+            <a href="#" class="btn">Join as Affiliate</a>
+            <a href="#" class="btn" style="background: white;">Join as Advertiser</a>
+        </div>
+    </section>
 
-<h2>Blogs</h2>
-<ul>
-  <li><a href="vcommission.html">VCommission Affiliate Network</a></li>
-  <!-- add more blog links here -->
-</ul>
+    <section class="section">
+        <h2>The Affiliate Advantage</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3141/3141133.png" alt="Fast Payouts">
+                <h3>Fastest Payouts</h3>
+                <p>Enjoy NET30 payment cycles. We are the only Indian network with a 15+ year track record of on-time payments.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="COD Traffic">
+                <h3>COD E-commerce</h3>
+                <p>Exclusive access to high-intent Cash-on-Delivery traffic campaigns optimized for the Indian market.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055644.png" alt="Tracking">
+                <h3>Real-Time Tracking</h3>
+                <p>Proprietary technology ensuring every click and conversion is recorded with 100% transparency.</p>
+            </div>
+        </div>
+    </section>
 
-<h2>Contact Info</h2>
-<p>
-Website: <a href="https://yourwebsite.com">https://yourwebsite.com</a><br>
-Email: contact@yoursite.com<br>
-Location: Your City, Country
-</p>
+    <section class="blog-section">
+        <h2 style="text-align: center; margin-bottom: 40px;">Featured Guides</h2>
+        <div class="blog-grid">
+            <div class="blog-item">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=500&q=60" alt="COD Traffic">
+                <div class="blog-content">
+                    <h3>Monetizing High-Intent COD Traffic</h3>
+                    <p>Learn how to use Skimmylo to scale your affiliate earnings in the Indian e-commerce sector...</p>
+                    <a href="#" style="color: var(--v-blue); font-weight: bold;">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=60" alt="Kitchenware">
+                <div class="blog-content">
+                    <h3>Top Selling Kitchen Appliances 2026</h3>
+                    <p>Promote Wonderchef and other top brands to earn high commissions this season...</p>
+                    <a href="#" style="color: var(--v-blue); font-weight: bold;">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a> | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a>
+        </div>
+        <p>&copy; 2026 vCommission Media Pvt Ltd. Presence in India, Singapore, UAE, UK, and USA.</p>
+    </footer>
 
 </body>
 </html>
